@@ -52,7 +52,7 @@ the * indicates that any number of the previous character or symbol can be betwe
 The script then iterates through the next 20 nodes to look for either "Online" or "Offline", if neither is found "ERROR!" will be listed as the register's status.
 It is important to note that extremely long location names may break this section of code
 In this case, find the line reading "while z < len(strings) and z < i + 20:" and change 20. Lower numbers will yield higher performance, but may miss indicators blocked by names.
-The Script also looks for the last character in row (the character is consistent across each report) and uses this to find the repl status and the HDD freespace %
+The Script also looks for the last character in row (the character is consistent across each report) and uses this to find the repl status, store close failures, and the HDD freespace %
 The results of the scan are used to create Register objects which hold the name, location, and status of each register.
 
 The register objects are then sorted into arrays listing offline registers for each park and department and a seperate array for registers with different problems.
