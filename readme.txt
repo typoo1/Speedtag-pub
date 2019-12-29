@@ -9,7 +9,7 @@ The easiest method is to use the rules wizard and move all emails from the relev
 
 
 User Instructions:
-Launch SpeedTag1.8.exe as any other .exe, no admin permissions should be required.
+Launch SpeedTag2.0.exe as any other .exe, no admin permissions should be required.
 A command prompt will open. Depending on if you have a config file set up yet or not, said file will either be loaded, or you'll be prompted to create the file through the script.
 If an error occurs around the config file, it is recommended to delete the file and try to set it up again.
 If the error persists, email Tye.Gallagher@buschgardens.com
