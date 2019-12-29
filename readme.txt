@@ -1,8 +1,8 @@
 Python 3.7.5
-Speedtag1.8
+Speedtag2.0
 
 Setup:
-Ensure that Chromedriver.exe is in the same folder as SpeedTag1.8.exe
+Ensure that Chromedriver.exe is in the same folder as SpeedTag2.0.exe
 Outlook:
 Setup rules to send all register reports to one folder
 The easiest method is to use the rules wizard and move all emails from the relevent email addresses to the correct folder.
@@ -34,14 +34,14 @@ WIL = Williamsburg
 The script will go through the target folder and pull any emails from the current date sent from "seap2018@seaworld.com" or "xstorereport@seaworld.com" or "swt.ithelpdesk@SeaWorld.com".
 These emails are then parsed into an array of strings which the script iterates through looking for registers and their status
 It uses the following Regex identifiers to find and sort registers into their correct park and department:
-    Park1c = "^" + Park1 + "...[0-9][0-9][0-9]"
-    Park1m = "^" + Park1 + ".....[0-9][0-9][0-9]"
-    Park2c = "^" + Park2 + "...[0-9][0-9][0-9]"
-    Park2m = "^" + Park2 + ".....[0-9][0-9][0-9]"
-    Park1MPR = "^" + Park1 + ".*MPR[0-9][0-9][0-9]"
-    Park2MPR = "^" + Park2 + ".*MPR[0-9][0-9][0-9]"
-    Park1QQ = "^" + Park1 + ".*QQ.*[0-9][0-9][0-9]"
-    Park2QQ = "^" + Park2 + ".*QQ.*[0-9][0-9][0-9]"
+    Park1c = "^" + Park1 + ".*CP[0-9]*"
+    Park1m = "^" + Park1 + ".*POS[0-9]*"
+    Park2c = "^" + Park2 + ".*CP[0-9]*"
+    Park2m = "^" + Park2 + ".*POS[0-9]*"
+    Park1MPR = "^" + Park1 + ".*MPR[0-9]*"
+    Park2MPR = "^" + Park2 + ".*MPR[0-9]*"
+    Park1QQ = "^" + Park1 + ".*QQ.*[0-9]*"
+    Park2QQ = "^" + Park2 + ".*QQ.*[0-9]*"
 
 where Park1 and Park2 refer to the 2 parks in association with the city given at setup (For Langhorn Park2 is an empty string)
 The "^" symbol denotes that the string begins with the regex identifier that follows
